@@ -1,6 +1,7 @@
 package practicaJava1;
 
 import java.time.LocalTime;
+import java.util.GregorianCalendar;
 
 public class practicaJava1 {
 
@@ -99,9 +100,44 @@ public class practicaJava1 {
 
 		// 8 Escribir un metodo para descubrir si un año ingresado es bisiesto o no
 	
+	static void esBisiesto (int anio) {
+		System.out.println("\n");
+		GregorianCalendar calendario = new GregorianCalendar();
+		if (calendario.isLeapYear(anio)) {
+			System.out.println("El año es bisiesto");
+		} else {
+			System.out.println("El año no es bisiesto");
+		}
+	
+	}
+	
 		// 9. Escribir mostrar en pantalla los primeros 100 numeros primos
 	
+	static void cienPrimos() {
+	    int cantidadPrimos = 100;
+	    int numeroActual = 2;
+	    int cantidadEncontrados = 0;
+	    System.out.println("\n");
+	    System.out.println("Los primeros 100 numero primos son: ");
+	    while (cantidadEncontrados < cantidadPrimos) {
+	        
+	    	boolean esPrimo = true;
+	        for (int i = 2; i < numeroActual; i++) {
+	            if (numeroActual % i == 0) {
+	                esPrimo = false;
+	            }
+	        }
+	        if (esPrimo) {
+	            System.out.print(numeroActual + " ");
+	            cantidadEncontrados++;
+	        }
+	        numeroActual++;
+	    }
+	}
+	
 		// 10. Escribir un programa para sumar 2 numeros sin usar operadores aritmeticos
+	
+	
 	
 	// 11. Escribir un método para verificar si un numero positivo de 2 digitos es palindromo
 
@@ -125,6 +161,8 @@ public class practicaJava1 {
 		volumenEsfera (2.22);
 		volumenCono (15, 30);
 		areaSuper(25.5); 
+		esBisiesto(2020);
+		cienPrimos();
 	
 	}
 
