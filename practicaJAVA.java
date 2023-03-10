@@ -137,13 +137,25 @@ public class practicaJava1 {
 	
 		// 10. Escribir un programa para sumar 2 numeros sin usar operadores aritmeticos
 	
-	
+	static void noOperadores() {
+		
+	}
 	
 	// 11. Escribir un método para verificar si un numero positivo de 2 digitos es palindromo
+	
+	
 
 	// 12. Sin usar loops, escribir un metodo para sumar todos los digitos de un numero donde 99 >= n >= 10
 	
+	
 	// 13. Escribir un método para remover espacios en blanco de un String. ej -> "Hola Mundo" -> "HolaMundo"
+	
+	static void remEsp(String frase) {
+		
+		frase = frase.replaceAll("\\s+", "");
+		System.out.println("\n");
+		System.out.println(frase);
+	}
 	
 	// 14. Escribir un método para invertir un String. ej -> "Hola" -> "aloH" --- Sin usar loops
 	
@@ -163,6 +175,8 @@ public class practicaJava1 {
 		areaSuper(25.5); 
 		esBisiesto(2020);
 		cienPrimos();
+		
+		remEsp("hola mundo feo feo");
 	
 	}
 
