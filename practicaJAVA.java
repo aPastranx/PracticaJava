@@ -63,11 +63,39 @@ public class practicaJava1 {
 		// 4 Escribir un metodo que convierta n cantidad de segundos a (hora, minutos, segundos) segun sea el caso
 		// ej 3600 = "1 hora = 60 min = 3600 seg"
 		
+	static void transformarSegundos(double n) {
+		double minutos = n/60;
+		double horas = minutos/60;
+		System.out.println("\n");
+		System.out.println(n + " segundo son:");
+		System.out.println(minutos + " minutos");
+		System.out.println(horas + " horas");
+		
+	}
 		// 5 Escribir un metodo para encontrar el volumen de una esfera dado el radio
+	
+	static void volumenEsfera (double rad) {
+		double volumen = ((4 * Math.PI * Math.pow(rad, 3))/3);
+		System.out.println("\n");
+		System.out.println("El volumen de la esfera es: " + volumen + "m^3");
+	}
 		
 		// 6 Escribir un metodo para encontrar el volumen de un cono a dado el radio y la altura
+	
+	static void volumenCono (double radCon, double altCon) {
+		double volumCono = ((Math.PI * Math.pow(radCon, 2) * altCon)/ 3);
+		System.out.println("\n");
+		System.out.println("El volumen del cono es: " + volumCono + "m^3");
+	}
+	
 		
 		// 7 Encontrar el area superficial de un cubo dado un lado a
+	
+	static void areaSuper(double ladoa) {
+		double areaSuperficial = 6 * Math.pow(ladoa, 2);
+		System.out.println("\n");
+		System.out.println("El área superficial del cubo es: " + areaSuperficial);
+	}
 
 		// 8 Escribir un metodo para descubrir si un año ingresado es bisiesto o no
 	
@@ -93,6 +121,11 @@ public class practicaJava1 {
 		areaTriangulo (10, 10, 10);
 		areaCirculo (4);
 		horaSys();
+		transformarSegundos(60);
+		volumenEsfera (2.22);
+		volumenCono (15, 30);
+		areaSuper(25.5); 
+	
 	}
 
 }
